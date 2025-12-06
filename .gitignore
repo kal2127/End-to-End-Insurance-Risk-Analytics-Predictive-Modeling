@@ -19,14 +19,17 @@ __pycache__/
 .dvc/cache
 .dvc_store/
 
-# Raw, processed, and interim data files are usually large.
-# We let DVC track the *metadata* for these files, but Git ignores the files themselves.
-# The user already placed the data here:
-data/raw/
-data/interim/
-data/processed/
 
 
+# Ignore ALL contents inside the data directories
+data/raw/*
+data/interim/*
+data/processed/*
+
+# EXCEPTION: UNIGNORE the small .dvc files that Git MUST track
+!data/raw/*.dvc
+!data/interim/*.dvc
+!data/processed/*.dvc
 
 # 4. Operating System / Editor Files
 ####################################
