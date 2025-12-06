@@ -1,0 +1,38 @@
+# 1. Python Environment & Compilation
+####################################
+# Virtual environment directory
+venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# 2. DVC and Data Artifacts
+###########################
+# DVC local cache where the large data files are stored.
+# Git tracks the .dvc files, not the cache content.
+.dvc/cache
+.dvc_store/
+
+
+
+# Ignore ALL contents inside the data directories
+data/raw/*
+data/interim/*
+data/processed/*
+
+# EXCEPTION: UNIGNORE the small .dvc files that Git MUST track
+!data/raw/*.dvc
+!data/interim/*.dvc
+!data/processed/*.dvc
+
+# 4. Operating System / Editor Files
+####################################
+.DS_Store # macOS files
+Thumbs.db # Windows files
+*~
