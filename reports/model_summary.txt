@@ -1,0 +1,93 @@
+Statistical Modeling Report (Task 4)
+Generated using GLM (Poisson for Frequency, Gamma for Severity)
+
+
+================================================================================
+--- Training Frequency Model (Poisson GLM) ---
+================================================================================
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:            Claim_Count   No. Observations:               194723
+Model:                            GLM   Df Residuals:                   194704
+Model Family:                 Poisson   Df Model:                           18
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -3859.7
+Date:                Mon, 08 Dec 2025   Deviance:                       6585.4
+Time:                        13:02:03   Pearson chi2:                 1.94e+05
+No. Iterations:                   100   Pseudo R-squ. (CS):          0.0001847
+Covariance Type:            nonrobust                                         
+======================================================================================================
+                                         coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+const                               7.873e+10   8.48e+12      0.009      0.993   -1.65e+13    1.67e+13
+num__CustomValueEstimate              -0.0116      0.074     -0.156      0.876      -0.157       0.134
+num__RegistrationYear                  0.0823      0.044      1.883      0.060      -0.003       0.168
+cat__Province_Eastern Cape          1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Free State            1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Gauteng               1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_KwaZulu-Natal         1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Limpopo               1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Mpumalanga            1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_North West            1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Northern Cape         1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Province_Western Cape          1.769e+11    2.4e+12      0.074      0.941   -4.53e+12    4.88e+12
+cat__Gender_Female                 -2.644e+11   7.83e+12     -0.034      0.973   -1.56e+13    1.51e+13
+cat__Gender_Male                   -2.644e+11   7.83e+12     -0.034      0.973   -1.56e+13    1.51e+13
+cat__Gender_Not specified          -2.644e+11   7.83e+12     -0.034      0.973   -1.56e+13    1.51e+13
+cat__Gender_nan                    -2.644e+11   7.83e+12     -0.034      0.973   -1.56e+13    1.51e+13
+cat__VehicleType_Bus                8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+cat__VehicleType_Heavy Commercial   8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+cat__VehicleType_Light Commercial   8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+cat__VehicleType_Medium Commercial  8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+cat__VehicleType_Passenger Vehicle  8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+cat__VehicleType_nan                8.786e+09   2.23e+12      0.004      0.997   -4.36e+12    4.38e+12
+======================================================================================================
+================================================================================
+--- Training Severity Model (Gamma GLM) ---
+================================================================================
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:         Claim_Severity   No. Observations:                  567
+Model:                            GLM   Df Residuals:                      548
+Model Family:                   Gamma   Df Model:                           18
+Link Function:                    Log   Scale:                          2.0182
+Method:                          IRLS   Log-Likelihood:                -6179.9
+Date:                Mon, 08 Dec 2025   Deviance:                       1133.1
+Time:                        13:02:11   Pearson chi2:                 1.21e+03
+No. Iterations:                   100   Pseudo R-squ. (CS):            0.05295
+Covariance Type:            nonrobust                                         
+======================================================================================================
+                                         coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+const                                  5.4986      0.393     13.985      0.000       4.728       6.269
+num__CustomValueEstimate               0.1448      0.325      0.445      0.656      -0.492       0.782
+num__RegistrationYear                  0.1415      0.075      1.896      0.058      -0.005       0.288
+cat__Province_Eastern Cape             0.5746      0.918      0.626      0.532      -1.225       2.375
+cat__Province_Free State               1.4369      0.754      1.905      0.057      -0.041       2.915
+cat__Province_Gauteng                  0.5679      0.201      2.822      0.005       0.173       0.962
+cat__Province_KwaZulu-Natal            0.7153      0.221      3.236      0.001       0.282       1.148
+cat__Province_Limpopo                  0.7487      0.425      1.762      0.078      -0.084       1.582
+cat__Province_Mpumalanga               0.2961      0.291      1.017      0.309      -0.275       0.867
+cat__Province_North West               0.2155      0.243      0.888      0.375      -0.260       0.691
+cat__Province_Northern Cape            0.3927      0.915      0.429      0.668      -1.401       2.186
+cat__Province_Western Cape             0.5509      0.227      2.429      0.015       0.106       0.995
+cat__Gender_Female                     2.0754      0.728      2.851      0.004       0.649       3.502
+cat__Gender_Male                       1.0127      0.457      2.218      0.027       0.118       1.908
+cat__Gender_Not specified              1.8207      0.362      5.034      0.000       1.112       2.530
+cat__Gender_nan                        0.5898      1.144      0.515      0.606      -1.653       2.833
+cat__VehicleType_Bus                   1.3232      1.248      1.060      0.289      -1.122       3.769
+cat__VehicleType_Heavy Commercial      0.7178      0.524      1.370      0.171      -0.309       1.745
+cat__VehicleType_Light Commercial      0.6166      0.768      0.803      0.422      -0.889       2.122
+cat__VehicleType_Medium Commercial     1.9500      0.402      4.848      0.000       1.162       2.738
+cat__VehicleType_Passenger Vehicle     2.1809      0.344      6.340      0.000       1.507       2.855
+cat__VehicleType_nan                  -1.2899      1.246     -1.036      0.300      -3.731       1.151
+======================================================================================================
+================================================================================
+--- Final Pure Premium Calculation and Comparison ---
+================================================================================
+Portfolio Total Actual Premium: ZAR 11,928,995.18
+Portfolio Total Modeled Pure Premium: ZAR 6,663,894,719.13
+
+Northern Cape Comparison:
+  Actual Premium Collected: ZAR 66,715.89
+  Modeled Pure Premium: ZAR 40,546.31
